@@ -1,0 +1,230 @@
+:root 
+{
+    --primary--clr : #dbdadf;
+    --secondary--clr : #c35862;
+    --black--clr : #353239;
+    --white--clr : #f2f1f7;
+    --blue--clr : #587dc3;
+
+    --body--clr : #f0f0f0;
+
+    --sidebarWidth : 280px;
+    --sidebarCollapsedWidth : 240px;
+    --sidebarWidth--sm : 200px;
+    --sidebarWidth--xs : 125px;
+}
+#userIndex
+{
+    width: 100%;
+    padding-top: 5rem;
+}
+.userSidebar
+{
+    z-index: 999;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    background-color: var(--black--clr);
+    color: var(--white--clr);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 2rem;
+    width: var(--sidebarWidth);
+    height: 100%;
+    text-transform: uppercase;
+    transition: .4s ease-in-out;
+    overflow: hidden;
+}
+.userSidebar.collapsed
+{
+    width: var(--sidebarCollapsedWidth);
+}
+.userSidebar.collapsed .sidebarLink
+{
+    width: var(--sidebarCollapsedWidth);
+}
+.userSidebar.collapsed .userName span
+{
+    transition-delay: .2s;
+    font-size: .8rem;
+}
+.userName
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4rem;
+    letter-spacing: .5rem;
+    gap: 1rem;
+}
+.userName span
+{
+    transition: .4s ease-in-out
+}
+.sidebarBtn, .sidebarBtn i
+{
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--white--clr);
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+}
+.userSidebar.collapsed .sidebarBtn i.fa-circle-chevron-left
+{
+    transform: rotate(180deg);
+}
+/* .sidebarBtn i.fa-circle-chevron-right
+{
+    display: none;
+}
+.userSidebar.collapsed .sidebarBtn i.fa-circle-chevron-right
+{
+    display: block;
+}
+.userSidebar.collapsed .sidebarBtn i.fa-circle-chevron-left
+{
+    display: none;
+} */
+.sidebarMenu
+{
+    align-self: flex-start;
+}
+.sidebarList
+{
+    /* cursor: pointer; */
+    list-style: none;
+}
+.sidebarLink
+{
+    /* color: var(--white--clr); */
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: var(--sidebarWidth);
+    padding: 1rem 0rem;
+    color: var(--white--clr);
+    transition: .4s ease-in-out;
+    font-size: 1.2rem;
+}
+.sidebarLink i 
+{
+    font-size: 1.4rem;
+}
+.sidebarLink span, .sidebarlink i
+{
+    width: 40%;
+}
+.sidebarLink:hover, .sidebarList.active .sidebarLink
+{
+    background-color: var(--primary--clr);
+    color: var(--black--clr);
+}
+
+
+
+#mainContent
+{
+    /* position: absolute;
+    top: 5rem;
+    left: 280px; */
+    padding-left: 280px;
+}
+
+/* Responsive */
+@media screen and (max-width: 834px)
+{
+    #mainContent
+    {
+        padding-left: 250px;
+    }
+    .userSidebar
+    {
+        width: 260px;
+    }
+    .sidebarLink
+    {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .userSidebar
+    {
+        width: var(--sidebarCollapsedWidth);
+    }
+    .userSidebar.collapsed 
+    {
+        width: var(--sidebarWidth--sm);
+    }
+    .userSidebar.collapsed .sidebarLink
+    {
+        font-size: .8rem;
+        width: var(--sidebarWidth--sm);
+    }
+    .userSidebar.collapsed .userName span
+    {
+        transition-delay: .2s;
+        font-size: .8rem;
+    }
+    .sidebarLink
+    {
+        width: var(--sidebarCollapsedWidth);
+        font-size: 1rem;
+    }
+
+    #mainContent
+    {
+        padding-left: var(--sidebarCollapsedWidth);
+    }
+    
+
+}
+@media screen and (max-width: 425px)
+{
+    .userSidebar
+    {
+        width: var(--sidebarWidth--xs);
+    }   
+    .sidebarLink
+    {
+        width: var(--sidebarWidth--xs);
+        font-size: .6rem;
+    }
+    .userName .sidebarBtn, .sidebarIcon
+    {
+        display: none;
+        visibility: hidden;
+    }
+    .userName span
+    {
+        font-size: .6rem;
+    }
+    #mainContent
+    {
+        padding-left: var(--sidebarWidth--xs);
+    }
+
+}
+@media screen and (max-width: 375px)
+{
+    .userSidebar
+    {
+        width: 100px;
+    }
+    .userSidebar .userName
+    {
+        display: none;
+        visibility: hidden;
+    }
+    #mainContent
+    {
+        padding-left: 90px;
+    }
+}
+/* Responsive Selesai */

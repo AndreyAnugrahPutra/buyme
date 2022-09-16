@@ -1,0 +1,155 @@
+:root 
+{
+    --primary--clr : #dbdadf;
+    --secondary--clr : #c35862;
+    --black--clr : #353239;
+    --white--clr : #f2f1f7;
+}
+body 
+{
+    background-color: var(--primary--clr);
+}
+#hero
+{
+    padding-top: 5rem;
+}
+.hero-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.hero-left, .hero-right
+{
+    padding: 2rem 4rem;
+    width: 50%;
+}
+.hero-title
+{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.hero-p 
+{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.shopNow-btn
+{
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: .4rem 1.2rem;
+    background-color: var(--black--clr);
+    color: var(--white--clr);
+    border: none;
+}
+
+
+.right-img
+{
+    width: 600px;
+    overflow: hidden;
+}
+.right-img img 
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.btn-group
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.product-btn, .cart-btn
+{
+    cursor: pointer;
+    margin-top: .5rem;
+    font-size: 1rem;
+    width: 100%;
+    padding: .4rem 1.2rem;
+}
+.product-btn
+{
+    background-color: transparent;
+    border: 2px solid var(--secondary--clr);
+    color: #353239;
+}
+.cart-btn
+{
+    background-color: var(--secondary--clr);
+    border: 2px solid var(--secondary--clr);
+    color: var(--white--clr);
+}
+
+
+@media screen and (max-width: 768px)
+{
+    .hero-container
+    {
+        align-items: flex-start;
+        height: 80vh;
+    }
+    .hero-left, .hero-right
+    {
+        padding: 4rem 2rem;
+        width: 50%;
+    }
+    .hero-title
+    {
+        font-size: 1.5rem;
+    }
+    .hero-p
+    {
+        font-size: .8rem;
+    }
+    .shopNow-btn
+    {
+        font-size: .8rem;
+        padding: .4rem 1.2rem;
+    }
+
+    .right-img, .product-btn, .cart-btn
+    {
+        width: 250px;
+    }
+    .product-btn, .cart-btn
+    {
+        font-size: .8rem;
+        padding: .2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .hero-container
+    {
+        /* flex-wrap: wrap; */
+        /* height: 100vh; */
+        padding-bottom: 2rem;
+        height: 60vh;
+    }
+    .hero-left
+    {
+        padding: 2rem 2rem;
+        width: 100%;
+    }
+    .hero-title
+    {
+        font-size: 1.4rem;
+    }
+    .hero-right
+    {
+        display: none;
+        visibility: hidden;
+    }
+    /* .right-img, .product-btn, .cart-btn
+    {
+        width: 200px;
+    } */
+}

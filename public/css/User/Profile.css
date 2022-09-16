@@ -1,0 +1,206 @@
+:root 
+{
+    --primary--clr : #dbdadf;
+    --secondary--clr : #c35862;
+    --black--clr : #353239;
+    --white--clr : #f2f1f7;
+    --blue--clr : #587dc3;
+
+    --body--clr : #f0f0f0;
+
+    --sidebarWidth : 280px;
+    --sidebarCollapsedWidth : 240px;
+    --sidebarWidth--sm : 200px;
+    --sidebarWidth--xs : 125px;
+}
+body 
+{
+    background-color: var(--body--clr);
+}
+.userProfile-container
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem 0;
+}
+.userImage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100vh;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border: 8px solid var(--black--clr);
+    font-size: 4rem;
+    color: var(--black--clr);
+}
+.userImage img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.userImage-Btn
+{
+    margin-top: 2rem;
+}
+.userImage-link
+{
+    background-color: var(--black--clr);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--white--clr);
+}
+.userProfile-list
+{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--black--clr);
+    line-height: 4rem;
+    width: 800px;
+}
+.userProfile-list label 
+{
+    width: 50%;
+    text-transform: uppercase;
+}
+.userProfile-list span 
+{
+    width: 50%;
+}
+.userProfile-list.userEdit
+{
+    border: none;
+}
+.userEdit-btn
+{
+    margin-top: 2rem;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: #587dc3;
+    color: var(--white--clr);
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px)
+{
+    .userProfile-list
+    {
+        width: 600px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .userImage
+    {
+        width: 160px;
+        height: 160px;
+        border: 8px solid var(--black--clr);
+        font-size: 2rem;
+        color: var(--black--clr);
+    }
+    .userImage-link
+    {
+        font-size: .8rem;
+        padding: .6rem;
+    }
+    .userProfile-list
+    {   
+        font-size: .8rem;
+        /* border-bottom: 2px solid var(--black--clr); */
+        line-height: 2rem;
+        width: 400px;
+
+    }
+    .userProfile-list label 
+    {
+        width: 40%;
+    }
+    .userEdit-btn
+    {
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+
+}
+@media screen and (max-width: 834px)
+{
+    .userProfile-list
+    {   
+        font-size: 1rem;
+        gap: .4rem;
+        width: 500px;
+    }
+    /* .userEdit-btn
+    {
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+    .userProfile-list label
+    {
+        width: 40%;
+    } */
+}
+@media screen and (max-width: 425px)
+{
+    .userImage
+    {
+        width: 100px;
+        height: 100px;
+        border: 4px solid var(--black--clr);
+        font-size: 1.5rem;
+        color: var(--black--clr);
+    }
+    .userImage-link
+    {
+        font-size: .6rem;
+        padding: .8rem;
+    }
+    .userProfile-list
+    {   
+        font-size: .6rem;
+        gap: .4rem;
+        width: 250px;
+    }
+    .userEdit-btn
+    {
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+    .userProfile-list label
+    {
+        width: 40%;
+    }
+
+}
+@media screen and (max-width: 375px)
+{
+    .userProfile-list
+    {
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0;
+        flex-direction: column;
+        width: 240px;
+    }
+}
+/* Responsive Selesai */

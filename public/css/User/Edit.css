@@ -1,0 +1,160 @@
+:root 
+{
+    --primary--clr : #dbdadf;
+    --secondary--clr : #c35862;
+    --black--clr : #353239;
+    --white--clr : #f2f1f7;
+    
+    --blue--clr : #587dc3;
+}
+.editProfile-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-title
+{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.editProfile-form
+{
+    margin-top: 2rem;
+    width: 40rem;
+}
+.input-group
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.input-group label
+{
+    text-align: center;
+    padding: .6rem 0;
+    width: 200px;
+    text-transform: uppercase;
+    background-color: var(--black--clr);
+    color: var(--white--clr);
+}
+.input-group input
+{
+    width: 400px;
+    padding: .5rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: 2px solid #b1b0b4;
+    color: var(--black--clr);
+    background-color: var(--white--clr);
+    /* font-weight: 500; */
+    transition: border .2s ease-in-out;
+}
+.input-group input:focus
+{
+    border-color: #c35862;
+}
+label[for="PasswordInp"] i 
+{
+    cursor: pointer;
+    margin-left: 1rem;
+}
+label[for="PasswordInp"] i:hover 
+{
+    color: var(--primary--clr);
+}
+label[for="PasswordInp"] .close
+{
+    display: none;
+}
+.updateBtn
+{
+    border: none;
+    background-color: var(--blue--clr);
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--white--clr);
+    height: 2.6rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 834px)
+{
+    .form-title
+    {
+        font-size: 1.4rem;
+    }
+    .editProfile-form
+    {
+        width: 30rem;
+    }
+    .input-group label, .input-group input
+    {
+        font-size: .8rem;
+    }
+    .updateBtn
+    {
+        font-size: 1rem;
+        height: 2.2rem;
+    }
+}
+@media screen and (max-width: 768px)
+{
+
+}
+@media screen and (max-width: 425px)
+{
+    .form-title
+    {
+        font-size: .8rem;
+    }
+    .editProfile-form
+    {
+        width: 18rem;
+    }
+    .input-group
+    {
+        gap: .2rem;
+    }
+    .input-group label, .input-group input
+    {
+        font-size: .6rem;
+    }
+    .updateBtn
+    {
+        font-size: .8rem;
+        height: 1.8rem;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    .editProfile-form
+    {
+        width: 16rem;
+    }
+    .input-group
+    {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .input-group input 
+    {   
+        width: 70%;
+    }
+    .input-group label, .input-group input
+    {
+        font-size: .6rem;
+    }
+    .updateBtn
+    {
+        width: 78%;
+    }
+}
+/* Responsive Selesai */

@@ -1,0 +1,157 @@
+:root 
+{
+    --primary--clr : #dbdadf;
+    --secondary--clr : #c35862;
+    --black--clr : #353239;
+    --white--clr : #f2f1f7;
+}
+body
+{
+    background-color: var(--primary--clr);
+}
+#signup  
+{
+    margin-top: 5rem;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+.signup-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.signup-title
+{
+    letter-spacing: .5rem;
+    font-weight: 500;
+}
+.signup-card
+{
+    margin-top: 2rem;
+}
+.input-group
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.input-group label
+{
+    text-align: center;
+    padding: .6rem 0;
+    width: 200px;
+    text-transform: uppercase;
+    background-color: var(--black--clr);
+    color: var(--white--clr);
+}
+.input-group input
+{
+    width: 400px;
+    padding: .5rem;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid #b1b0b4;
+    color: var(--black--clr);
+    background-color: var(--white--clr);
+    /* font-weight: 500; */
+    transition: border .2s ease-in-out;
+}
+.input-group input:focus
+{
+    border-color: #c35862;
+}
+label[for="PasswordInp"] i 
+{
+    cursor: pointer;
+    margin-left: 1rem;
+}
+label[for="PasswordInp"] i:hover 
+{
+    color: var(--primary--clr);
+}
+label[for="PasswordInp"] .close
+{
+    display: none;
+}
+.signup-button
+{
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #c4636c;
+    color: var(--primary--clr);
+    transition: .4s ease-in-out;
+    border: none;
+    outline: none;
+}
+.signup-button:hover
+{
+    background-color: var(--secondary--clr);
+    color: var(--white--clr);
+}
+/* Responsive */
+@media screen and (max-width: 768px)
+{
+    /* .signup-card
+    {
+        margin-top: 2rem;
+    } */
+    .input-group input 
+    {
+        width: 360px;
+        font-size: .9rem;
+    }
+    .input-group label
+    {
+        font-size: .9rem;
+    }
+    .signup-button
+    {
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .input-group input 
+    {
+        width: 200px;
+        font-size: .8rem;
+    }
+    .input-group label
+    {
+        font-size: .8rem;
+    }
+    .signup-button
+    {
+        padding: 0.4rem;
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 425px)
+{
+    .signup-title
+    {
+        font-size: 1.2rem;
+    }
+    .input-group input 
+    {
+        width: 150px;
+        font-size: .7rem;
+    }
+    .input-group label
+    {
+        padding: 0.6rem 0;
+        font-size: .7rem;
+        width: 120px;
+    }
+    .signup-button
+    {
+        font-size: .7rem;
+    }
+}
+/* Responsive Selesai */
