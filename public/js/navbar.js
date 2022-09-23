@@ -19,3 +19,11 @@ navBtn.addEventListener('click', () =>
         openIcon.style.display = 'block' ;
     }
 })
+
+let kategoriBtn = document.querySelector('.kategoriBtn');
+let kategoriMenu = document.querySelector('.kategori-menu');
+
+kategoriBtn.addEventListener('click', () =>
+{
+    kategoriMenu.classList.toggle('show');
+})

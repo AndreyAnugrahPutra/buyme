@@ -25,8 +25,14 @@ body
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 4rem;
     padding: 2rem 0;
+}
+.userProfile-picture
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .userImage
 {
@@ -49,15 +55,34 @@ body
 }
 .userImage-Btn
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
     margin-top: 2rem;
 }
 .userImage-link
 {
+    text-align: center;
     background-color: var(--black--clr);
     text-decoration: none;
     font-size: 1rem;
     padding: 1rem;
     color: var(--white--clr);
+}
+.userImage-delete
+{
+    text-align: center;
+    background-color: var(--secondary--clr);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--white--clr);
+}
+.userProfile-data
+{
+    margin-top: 2rem;
 }
 .userProfile-list
 {
@@ -65,7 +90,7 @@ body
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     font-size: 1.2rem;
     border-bottom: 2px solid var(--black--clr);
     line-height: 4rem;
@@ -75,10 +100,6 @@ body
 {
     width: 50%;
     text-transform: uppercase;
-}
-.userProfile-list span 
-{
-    width: 50%;
 }
 .userProfile-list.userEdit
 {
@@ -108,7 +129,16 @@ body
         width: 600px;
     }
 }
-@media screen and (max-width: 768px)
+@media screen and (max-width: 834px)
+{
+    .userProfile-list
+    {   
+        font-size: 1rem;
+        gap: .4rem;
+        width: 500px;
+    }
+}
+@media screen and (max-width: 768px )
 {
     .userImage
     {
@@ -118,7 +148,7 @@ body
         font-size: 2rem;
         color: var(--black--clr);
     }
-    .userImage-link
+    .userImage-link, .userImage-delete
     {
         font-size: .8rem;
         padding: .6rem;
@@ -127,38 +157,20 @@ body
     {   
         font-size: .8rem;
         /* border-bottom: 2px solid var(--black--clr); */
-        line-height: 2rem;
-        width: 400px;
+        line-height: 4rem;
+        width: 360px !important;
 
     }
     .userProfile-list label 
     {
-        width: 40%;
+        width: 50%;
     }
     .userEdit-btn
     {
-        font-size: .8rem;
-        margin-top: 1rem;
-    }
-
-}
-@media screen and (max-width: 834px)
-{
-    .userProfile-list
-    {   
+        height: 3rem;
         font-size: 1rem;
-        gap: .4rem;
-        width: 500px;
-    }
-    /* .userEdit-btn
-    {
-        font-size: .8rem;
         margin-top: 1rem;
     }
-    .userProfile-list label
-    {
-        width: 40%;
-    } */
 }
 @media screen and (max-width: 425px)
 {
@@ -170,21 +182,22 @@ body
         font-size: 1.5rem;
         color: var(--black--clr);
     }
-    .userImage-link
+    .userImage-link, .userImage-delete
     {
         font-size: .6rem;
         padding: .8rem;
     }
     .userProfile-list
-    {   
+    {  
         font-size: .6rem;
         gap: .4rem;
-        width: 250px;
+        width: 240px !important;
     }
     .userEdit-btn
     {
         font-size: .8rem;
         margin-top: 1rem;
+        height: 2.4rem;
     }
     .userProfile-list label
     {
@@ -201,6 +214,12 @@ body
         gap: 0;
         flex-direction: column;
         width: 240px;
+    }
+    .userEdit-btn
+    {
+        font-size: .7rem;
+        margin-top: 1.4rem;
+        height: 2rem;
     }
 }
 /* Responsive Selesai */

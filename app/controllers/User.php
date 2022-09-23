@@ -8,6 +8,8 @@ class User extends Controller
         $data['user_data'] = $this->model('Users_model')->getUserProfile();
 
         $data['user_pic'] = $this->model('Users_model')->getUserProfilePic();
+        
+        $data['kategori_produk'] = $this->model('Produk_model')->getKategoriProduk();
 
         $data['judulHalaman'] = 'Profile';
         $this->view('user/templates/header', $data);
@@ -39,7 +41,22 @@ class User extends Controller
 
     public function updateProfile()
     {
-        $this->model('Users_model')->updateProfile();
+        if(isset($_POST['updateBtn']))
+        {
+            if($this->model('Users_model')->updateProfile($_POST) > 0)
+            {
+                $this->model('Users_model')->getUserProfile();
+                Notification::setNotif('success', 'Profile Di Update','');
+                header('Location: '.BASEURL.'user/index');
+                exit;
+            }
+            else
+            {
+                Notification::setNotif('failed', 'Gagal','Profile Gagal Di Update');
+                header('Location: '.BASEURL.'user/editProfile');
+                exit;
+            }
+        }
     }
     // public function UserProfile()
     // {

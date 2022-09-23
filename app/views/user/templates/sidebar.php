@@ -3,7 +3,6 @@
 
     <div class="userSidebar">
         <div class="userName">
-            <span><?=$data['user_data']['Username']?></span>
             <button class="sidebarBtn">
                 <i class="fa fa-circle-chevron-left"></i>
             </button>

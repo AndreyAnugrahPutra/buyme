@@ -2,33 +2,53 @@
         <?php Notification::Notif();?>
         <div class="userProfile-container">
             <div class="userProfile-picture">
-                <div class="userImage">
-                    <?php
-                    if($data['user_pic']['Picture'] != '')
-                    {
-                    ?>
+                <?php
+                if($data['user_pic'] > 0)
+                {
+                ?>
+                    <div class="userImage">
                     <img src="<?=BASEURL?>img/userPic/<?=$data['user_pic']['Picture']?>" alt="">
+                    </div>
+                <?php
+                }
+                else
+                {
+                ?>
+                    <div class="userImage">
+                    <i class="fa fa-image"></i>
+                    </div>
+                <?php
+                }
+                ?>
+                <div class="userImage-Btn">
                     <?php
-                    }
-                    else
+                    if($data['user_pic'] > 0)
                     {
                     ?>
-                    <i class="fa fa-image"></i>
-                </div>
-
-                <div class="userImage-Btn">
+                    <a href="<?=BASEURL?>ProfilePic/edit" class="userImage-link">
+                        Ubah Foto Profil <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="<?=BASEURL?>ProfilePic/hapus" class="userImage-delete">
+                        Hapus Foto Profil <i class="fa fa-trash-can"></i>
+                    </a>
+                    <?php }
+                    else 
+                    {
+                    ?>
                     <a href="<?=BASEURL?>ProfilePic/index" class="userImage-link">
                         Tambahkan Foto Profil <i class="fa fa-edit"></i>
                     </a>
                     <?php
                     }
                     ?>
+                   
                 </div>
+
             </div>
 
             <ul class="userProfile-data">
                 <li class="userProfile-list">
-                    <label>Nama Lengkap :</label>
+                    <label>Nama Lengkap : </label>
                     <span>
                         <?=$data['user_data']['NamaLengkap']?>
                     </span>

@@ -30,6 +30,19 @@
         <a href="<?=BASEURL?>index" class="nav-brand">BuyMe</a>
 
         <div class="cta-group">
+
+            <button class="kategoriBtn">Kategori <i class="fa fa-chevron-down"></i></button>
+            
+            <ul class="kategori-menu">
+                <?php foreach($data['kategori_produk'] as $kategori) :
+                ?>
+
+                    <a href="<?=BASEURL?>kategori/<?=$kategori['Kategori_produk']?>" class="kategori-list">
+                        <?=$kategori['Kategori_produk']?>
+                    </a>
+                    
+                <?php endforeach; ?>
+            </ul>
         <?php
         if ( !isset($_SESSION['login']))
         {
@@ -53,9 +66,6 @@
         <ul class="nav-menu">
             <li class="nav-list">
                 <a href="<?=BASEURL?>index" class="nav-link">Home</a>
-            </li>
-            <li class="nav-list">
-                <a href="#" class="nav-link">Link 1</a>
             </li>
             <?php
             if ( !isset($_SESSION['login']))

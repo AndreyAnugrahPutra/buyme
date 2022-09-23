@@ -4,6 +4,7 @@ class Home extends Controller
 {
     public function index()
     {
+        $data['kategori_produk'] = $this->model('Produk_model')->getKategoriProduk();
         $data['judulHalaman'] = 'Home';
         $this->view('templates/header', $data);
         $this->view('home/index', $data);

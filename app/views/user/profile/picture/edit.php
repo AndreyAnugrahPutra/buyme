@@ -2,10 +2,10 @@
     <?php Notification::Notif();?>
     <div class="pictureForm-container">
         <div class="imgPreview">
-            <img src="" alt="none" class="img">
+            <img src="<?=BASEURL?>img/userPic/<?=$data['user_pic']['Picture']?>" alt="" class="img">
         </div>
 
-        <form action="<?=BASEURL?>ProfilePic/uploadFoto" method="post" enctype="multipart/form-data">
+        <form action="<?=BASEURL?>ProfilePic/updateFoto" method="post" enctype="multipart/form-data">
 
         <div class="imgInput">
             <input name="userImg" type="file" id="inputImage" class="inputImg" onchange="previewImg()">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="upload-image">
-            <button type="submit" class="uploadImg" name="uploadBtn">Upload Foto</button>
+            <button type="submit" class="uploadImg" name="updateBtn">Update Foto</button>
         </div>
 
         </form>

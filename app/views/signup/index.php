@@ -39,6 +39,7 @@
                 <label for="Alamat">Alamat</label>
                 <input type="text" name="Alamat" class="Alamat" placeholder="Alamat Anda..." required>
             </div>
+
             <div class="input-group">
                 <button type="submit" class="signup-button">BUAT AKUN</button>
             </div>

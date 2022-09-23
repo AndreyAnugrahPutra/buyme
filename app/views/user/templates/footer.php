@@ -5,7 +5,7 @@
 <script src="<?=BASEURL?>js/user/sidebar.js"></script>
 <script src="<?=BASEURL?>js/jquery-3.6.0.min.js"></script>
 <script>
-         $(document).on('click', '.sidebarLink', function()
+        $(document).on('click', '.sidebarLink', function()
         {
             $(this).addClass('active').siblings().removeClass('active')
         })

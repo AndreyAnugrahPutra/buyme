@@ -1,4 +1,5 @@
 <section id="mainContent">
+<?php Notification::Notif();?>
     <h5 class="form-title">UBAH PROFILE</h5>
     <div class="editProfile-container">
         <!-- FORM -->
@@ -43,7 +44,7 @@
             </div>
 
             <div class="input-group">
-                <button type="submit" class="updateBtn">UPDATE PROFILE </button>
+                <button type="submit" class="updateBtn" name="updateBtn">UPDATE PROFILE </button>
             </div>
 
         </form>

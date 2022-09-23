@@ -46,11 +46,6 @@
 {
     width: var(--sidebarCollapsedWidth);
 }
-.userSidebar.collapsed .userName span
-{
-    transition-delay: .2s;
-    font-size: .8rem;
-}
 .userName
 {
     display: flex;
@@ -59,10 +54,6 @@
     font-size: 1.4rem;
     letter-spacing: .5rem;
     gap: 1rem;
-}
-.userName span
-{
-    transition: .4s ease-in-out
 }
 .sidebarBtn, .sidebarBtn i
 {
@@ -125,9 +116,6 @@
     background-color: var(--primary--clr);
     color: var(--black--clr);
 }
-
-
-
 #mainContent
 {
     /* position: absolute;
@@ -167,7 +155,7 @@
         font-size: .8rem;
         width: var(--sidebarWidth--sm);
     }
-    .userSidebar.collapsed .userName span
+    .userName  span
     {
         transition-delay: .2s;
         font-size: .8rem;
@@ -187,11 +175,11 @@
 }
 @media screen and (max-width: 425px)
 {
-    .userSidebar
+    .userSidebar, .userSidebar.collapsed
     {
         width: var(--sidebarWidth--xs);
     }   
-    .sidebarLink
+    .userSidebar.collapsed .sidebarLink, .sidebarLink
     {
         width: var(--sidebarWidth--xs);
         font-size: .6rem;
@@ -201,10 +189,6 @@
         display: none;
         visibility: hidden;
     }
-    .userName span
-    {
-        font-size: .6rem;
-    }
     #mainContent
     {
         padding-left: var(--sidebarWidth--xs);
@@ -213,7 +197,7 @@
 }
 @media screen and (max-width: 375px)
 {
-    .userSidebar
+    .userSidebar, .userSidebar.collapsed
     {
         width: 100px;
     }

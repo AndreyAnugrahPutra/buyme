@@ -17,12 +17,22 @@
     width: 100%;
     z-index: 9999;
 }
+.left   
+{
+    margin-left: 4rem;
+}
+.right
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4rem;
+}
 .nav-brand
 {
     text-decoration: none;
     color: var(--black--clr);
     font-size: 1.6rem;
-    margin-left: 4rem;
 }
 .nav-menu
 {
@@ -30,17 +40,57 @@
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
-    margin-right: 4rem;
 }
 .nav-list
 {
     list-style: none;
 }
+.kategoriBtn
+{
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--black--clr);
+    margin-right: 1.4rem;
+}
+ul.kategori-menu
+{
+    display: none;
+}
+ul.kategori-menu.show
+{
+    top: 5rem;
+    position: absolute;
+    background-color: var(--black--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.4rem 1rem;
+}
+.kategori-list 
+{
+    list-style: none;
+    padding: .5rem;
+    width: 100%;
+    cursor: pointer;
+    list-style: none;
+    transition: .4s ease-in-out;
+    text-decoration: none;
+    color: var(--primary--clr);
+}
+.kategori-list:hover 
+{
+    background-color: var(--primary--clr);
+    color: var(--black--clr);
+}
 .nav-link
 {
     text-decoration: none;
     color: var(--black--clr);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .nav-list .login-btn
 {
@@ -77,9 +127,13 @@ a.nav-link.profile-link
 /* navbar responsive */
 @media screen and (max-width: 768px)
 {
-    .nav-brand
+    .left
     {
         margin-left: 2rem;
+    }
+    .right
+    {
+        margin-right: 2rem;
     }
     #navBtn .close
     {
@@ -97,7 +151,7 @@ a.nav-link.profile-link
         height: 2.4rem;
         width: 3rem;
         font-size: 1.2rem;
-        margin-right: 2rem;
+        /* margin-right: 2rem; */
     }
     .nav-menu
     {
@@ -151,10 +205,23 @@ a.nav-link.profile-link
         background-color: var(--secondary--clr);
         color: var(--white--clr);
     }
+    .kategoriBtn
+    {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    ul.kategori-menu.show a
+    {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 425px)
 {
+    .right
+    {
+        margin-right: 2rem;
+    }
     .nav-brand
     {
         font-size: 1.3rem;
@@ -174,5 +241,20 @@ a.nav-link.profile-link
         font-size: .8rem;
         padding: .3rem .6rem;
     }
+    .kategoriBtn
+    {
+        font-size: 1rem;
+    }
+    ul.kategori-menu.show a
+    {
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    .kategoriList
+    {
+        left: 4%;
+    }    
 }
 /* navbar responsive selesai */

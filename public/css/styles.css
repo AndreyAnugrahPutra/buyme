@@ -54,8 +54,14 @@ button.close-notif
     border: none;
     font-size: 1.4rem;
 }
-/* .notification-body
+/* responsive */
+@media screen and (max-width: 425px)
 {
-    
-} */
+    .notification-card
+    {
+        flex-wrap: wrap;
+        font-size: .8rem;
+    }
+}
+/* responsive selesai */
 /* notification card selesai */
