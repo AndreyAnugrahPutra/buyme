@@ -1,0 +1,270 @@
+:root 
+{
+    --primary--clr : #dbdadf;
+    --secondary--clr : #c35862;
+    --black--clr : #353239;
+    --white--clr : #f2f1f7;
+}
+.navbar
+{
+    position: fixed;
+    top: 0;
+    background-color: var(--primary--clr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    z-index: 9999;
+}
+.left   
+{
+    margin-left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.left .adminUsername
+{
+    font-size: 1.2rem;
+    border-left: 2px solid var(--black--clr);
+    padding-left: 1rem;
+}
+.right
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4rem;
+}
+.nav-brand
+{
+    text-decoration: none;
+    color: var(--black--clr);
+    font-size: 1.6rem;
+}
+.nav-menu
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-list
+{
+    list-style: none;
+}
+.kategoriBtn
+{
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--black--clr);
+    margin-right: 1.4rem;
+}
+ul.kategori-menu
+{
+    display: none;
+}
+ul.kategori-menu.show
+{
+    top: 5rem;
+    position: absolute;
+    background-color: var(--black--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.4rem 1rem;
+}
+.kategori-list 
+{
+    list-style: none;
+    padding: .5rem;
+    width: 100%;
+    cursor: pointer;
+    list-style: none;
+    transition: .4s ease-in-out;
+    text-decoration: none;
+    color: var(--primary--clr);
+}
+.kategori-list:hover 
+{
+    background-color: var(--primary--clr);
+    color: var(--black--clr);
+}
+.nav-link
+{
+    text-decoration: none;
+    color: var(--black--clr);
+    font-size: 1.2rem;
+}
+.nav-list .login-btn
+{
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* cursor: pointer; */
+    padding: .4rem .8rem;
+    background-color: var(--secondary--clr);
+    color: var(--white--clr);
+    /* border-radius: 1vh; */
+    transition: .4s ease-in-out;
+}
+.nav-list .login-btn:hover
+{
+    background-color: var(--secondary--clr);
+    color: var(--white--clr);
+}
+#navBtn
+{
+    display: none;
+    visibility: hidden;
+}
+.cta-group .login-btn
+{
+    display: none;
+    visibility: hidden;
+}
+a.nav-link.profile-link
+{
+    font-size: 2rem;
+}
+
+
+/* navbar responsive */
+@media screen and (max-width: 768px)
+{
+    .left
+    {
+        margin-left: 2rem;
+    }
+    .right
+    {
+        margin-right: 2rem;
+    }
+    #navBtn .close
+    {
+        display: none;
+    }
+    #navBtn
+    {
+        display: block;
+        visibility: visible;
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--black--clr);
+        border: 2px solid var(--black--clr);
+        /* padding: 0.2rem .8rem; */
+        height: 2.4rem;
+        width: 3rem;
+        font-size: 1.2rem;
+        /* margin-right: 2rem; */
+    }
+    .nav-menu
+    {
+        padding-top: 2rem;
+        position: absolute;
+        background-color: var(--black--clr);
+        top: 100%;
+        left: -100%;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        z-index: 9999;
+        transition: .4s ease-in-out;
+        /* padding: 2rem 0; */
+    }
+    .nav-menu.show
+    {
+        left: 0;
+    }
+    .nav-list 
+    {
+        margin-left: 2rem;
+        width: 100%;
+        height: 2rem;
+    }
+    .nav-link
+    {
+        color: var(--white--clr);
+    }
+    .nav-list .login-btn
+    {
+        display: none;
+        visibility: hidden;
+    }
+
+    .cta-group
+    {
+        display: flex;
+        gap: .5rem;
+    }
+    .cta-group .login-btn
+    {
+        text-decoration: none   ;
+        display: block;
+        visibility: visible;
+        font-size: 1.2rem;
+        padding: .2rem .8rem;
+        background-color: var(--secondary--clr);
+        color: var(--white--clr);
+    }
+    .kategoriBtn
+    {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    ul.kategori-menu.show a
+    {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .right
+    {
+        margin-right: 2rem;
+    }
+    .nav-brand
+    {
+        font-size: 1.3rem;
+    }
+    .nav-link 
+    {
+        font-size: 1rem;
+    }
+    #navBtn
+    {
+        font-size: 1rem;
+        height: 1.8rem;
+        width: 2.6rem;
+    }
+    .cta-group .login-btn
+    {
+        font-size: .8rem;
+        padding: .3rem .6rem;
+    }
+    .kategoriBtn
+    {
+        font-size: 1rem;
+    }
+    ul.kategori-menu.show a
+    {
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    .kategoriList
+    {
+        left: 4%;
+    }    
+}
+/* navbar responsive selesai */

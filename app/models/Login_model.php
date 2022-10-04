@@ -20,7 +20,7 @@ class Login_model
         
         $this->db->query($query);
         $this->db->bind('username', $Username);
-        $this->db->bind('PasswordInp', password_verify($password, $query));
+        $this->db->bind('PasswordInp', $password);
 
         return $this->db->single();
     }

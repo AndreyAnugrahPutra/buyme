@@ -9,19 +9,20 @@
 .notification-card
 {
     font-size: 1.2rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     padding: 1rem 2rem;
-    /* position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -15%); */
-    position: relative;
+    position: absolute;
+    top: .2rem;
+    left: 34%;
+    /* transform: translate(-50%, -15%); */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    width: 600px;
     gap: 1rem;
-    z-index: 10;
+    z-index: 9995;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
 }
 .notification-card.bg-success
 {
@@ -43,6 +44,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
 }
 button.close-notif
@@ -55,12 +57,42 @@ button.close-notif
     font-size: 1.4rem;
 }
 /* responsive */
+@media screen and (max-width: 1024px)
+{
+    .notification-card
+    {
+        width: 500px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .notification-card
+    {
+        width: 300px;
+        font-size: 1rem;
+    }
+}
 @media screen and (max-width: 425px)
 {
     .notification-card
     {
+        padding: .5rem 1rem;
+        gap: .5rem;
+        width: 200px;
         flex-wrap: wrap;
-        font-size: .8rem;
+        font-size: .7rem;
+    }
+    button.close-notif
+    {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    .notification-card
+    {
+        width: 180px;
+        font-size: .5rem;
     }
 }
 /* responsive selesai */

@@ -12,9 +12,9 @@ class Signup extends Controller
 
     public function tambah()
     {
-        $cekUsername = $this->model('Users_model')->cekUser();
+        $cekUsername['User'] = $this->model('Users_model')->cekUser();
 
-        if( $cekUsername['Username'] == $_POST['Username'])
+        if( $cekUsername['User']['Username'] = '')
         {
             Notification::setNotif('failed', 'Signup Gagal!', 'Username Sudah Terdaftar');
             header('Location: '. BASEURL .'signup/index');

@@ -3,7 +3,7 @@
 
 <section id="signup">
     <div class="signup-container">
-        <h1 class="signup-title">DAFTAR AKUN</h1>
+        <h1 class="signup-title">SIGNUP</h1>
 
         <div class="signup-card">
             <!-- FORM -->
@@ -21,7 +21,7 @@
                     <i class="fa fa-eye show" id="eyeShow"></i>
                     <i class="fa fa-eye-slash close" id="eyeClose"></i>
                 </label>
-                <input type="password" name="PasswordInp" class="Password" placeholder="Password Anda..." required>
+                <input type="password" name="PasswordInp" class="Password" placeholder="Password Anda..." max="8" required>
             </div>
             <div class="input-group">
                 <label for="Email">Email </label>

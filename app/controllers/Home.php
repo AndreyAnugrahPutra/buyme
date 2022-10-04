@@ -1,5 +1,7 @@
 <?php
 
+$_SESSION['url'] = $_SERVER['REQUEST_URI'];
+
 class Home extends Controller
 {
     public function index()

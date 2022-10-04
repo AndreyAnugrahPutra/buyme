@@ -1,4 +1,9 @@
 <?php
+// require_once 'auth_user.php';
+if(isset($_SESSION['login']))
+{
+    header('Location: '.$_SESSION['url']);
+}
 
 class Login extends Controller
 {
@@ -17,8 +22,9 @@ class Login extends Controller
         {
             $_SESSION['user'] = $this->model('Login_model')->LoginUser();
             $_SESSION['login'] = 'true';
+            $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 
-            if($_SESSION['user']['Role'] == 1)
+            if($_SESSION['user']['Role'] == 2)
             {
                 Notification::setNotif('success', 'Selamat Datang', ''.$_SESSION['user']['Username'].'');
                 header('Location: '.BASEURL.'home/index');

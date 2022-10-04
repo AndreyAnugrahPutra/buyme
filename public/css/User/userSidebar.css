@@ -11,7 +11,7 @@
     --sidebarWidth : 280px;
     --sidebarCollapsedWidth : 240px;
     --sidebarWidth--sm : 200px;
-    --sidebarWidth--xs : 125px;
+    --sidebarWidth--xs : 100px;
 }
 #userIndex
 {
@@ -118,9 +118,6 @@
 }
 #mainContent
 {
-    /* position: absolute;
-    top: 5rem;
-    left: 280px; */
     padding-left: 280px;
 }
 
@@ -175,11 +172,11 @@
 }
 @media screen and (max-width: 425px)
 {
-    .userSidebar, .userSidebar.collapsed
+    .userSidebar
     {
         width: var(--sidebarWidth--xs);
     }   
-    .userSidebar.collapsed .sidebarLink, .sidebarLink
+    .sidebarLink
     {
         width: var(--sidebarWidth--xs);
         font-size: .6rem;

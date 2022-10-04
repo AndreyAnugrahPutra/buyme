@@ -63,14 +63,14 @@ class Users_model
         $userid = rand();
         
         $query = "INSERT INTO users_db VALUES
-                 ('$userid', :NamaLengkap, :Username, :PasswordInp, :Email, :TanggalLahir, :NomorTelp, :Alamat, '$tanggalJoin', 1)";
+                 ('$userid', :NamaLengkap, :Username, :PasswordInp, :Email, :TanggalLahir, :NomorTelp, :Alamat, '$tanggalJoin', 2)";
 
         
         $password = $data['PasswordInp'];
         $this->db->query($query);
         $this->db->bind('NamaLengkap', $data['NamaLengkap']);
         $this->db->bind('Username', $data['Username']);
-        $this->db->bind('PasswordInp', password_hash($password, PASSWORD_DEFAULT));
+        $this->db->bind('PasswordInp', $password);
         $this->db->bind('Email', $data['Email']);
         $this->db->bind('TanggalLahir', $data['TanggalLahir']);
         $this->db->bind('NomorTelp', $data['NomorTelp']);

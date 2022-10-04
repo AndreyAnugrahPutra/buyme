@@ -40,7 +40,7 @@ body
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2.4rem;
 }
 .input-group
 {
@@ -81,7 +81,8 @@ body
     display: block;
     visibility: visible;
     font-size: 1.2rem;
-    padding: .2rem 8.4rem;
+    width: 82%;
+    height: 2.4rem;
     background-color: var(--secondary--clr);
     color: var(--white--clr);
     outline: none;
@@ -90,7 +91,7 @@ body
 }
 .signup
 {
-    margin-top: 1rem;
+    margin-top: .2rem;
     font-size: 1.2rem;
 }
 .signup-link
@@ -104,6 +105,11 @@ body
     .input-group i, .input-group input
     {
         font-size: 1rem;
+    }
+    .login-button
+    {
+        width: 73%;
+        height: 2.4rem;
     }
 }
 

@@ -1,0 +1,217 @@
+:root 
+{
+    --primary--clr : #dbdadf;
+    --secondary--clr : #c35862;
+    --black--clr : #353239;
+    --black--clr-1 : #29272c;
+    --white--clr : #f2f1f7;
+    --white--clr-1 : #e0e0e4;
+    --blue--clr : #587dc3;
+
+    --body--clr : #f0f0f0;
+
+    --sidebar-Normal : 240px;
+    --sidebar-Medium : 160px;
+    --sidebar-Small : 100px;
+}
+#adminIndex
+{
+    display: flex;
+    position: relative;
+    top: 5rem;
+    width: 100%;
+}
+#mainContent
+{
+    padding-left: var(--sidebar-Normal);
+    /* width: calc(100% - var(--sidebar-Normal));
+    position: absolute;
+    top: 5rem;
+    left: var(--sidebar-Normal);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; */
+}
+.adminSidebar
+{
+    z-index: 9999;
+    top: 5rem;
+    left: 0;
+    position: fixed;
+    width: var(--sidebar-Normal);
+    height: 100%;
+    background-color: var(--black--clr);
+    color: var(--white--clr);
+    overflow: hidden;
+}
+.sidebarMenu
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.sidebarList
+{
+    list-style: none;
+}
+.sidebarLink
+{
+    height: 4rem;
+    width: var(--sidebar-Normal);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--white--clr);
+    text-transform: uppercase;
+    transition: .4s ease-in-out;
+}
+.sidebarLink:hover
+{
+    background-color: var(--white--clr);
+    color: var(--black--clr);
+}
+.productBtn
+{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    height: 4rem;
+    width: var(--sidebar-Normal);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--white--clr);
+    text-transform: uppercase;
+    transition: .4s ease-in-out;
+}
+.productBtn:hover, .productBtn.clicked
+{
+    background-color: var(--white--clr);
+    color: var(--black--clr);
+}
+.productBtn i 
+{
+    transition: .4s ease-in-out;
+}
+.productBtn.clicked i 
+{
+    rotate: 180deg;
+}
+.productMenu
+{
+    height: 0;
+    background-color: var(--black--clr-1);
+    transition: height .4s ease-in-out;
+    overflow: hidden;
+}
+.productMenu.show
+{
+    height: 192px;
+}
+.productMenu .sidebarLink
+{
+    font-size: 1rem;
+}
+.productMenu .sidebarLink:hover
+{
+    background-color: var(--white--clr-1);
+}
+.userBtn
+{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    height: 4rem;
+    width: var(--sidebar-Normal);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--white--clr);
+    text-transform: uppercase;
+    transition: .4s ease-in-out;
+}
+.userBtn:hover, .userBtn.clicked
+{
+    background-color: var(--white--clr);
+    color: var(--black--clr);
+}
+.userBtn i 
+{
+    transition: .4s ease-in-out;
+}
+.userBtn.clicked i 
+{
+    rotate: 180deg;
+}
+.userMenu
+{
+    height: 0;
+    background-color: var(--black--clr-1);
+    transition: height .4s ease-in-out;
+    overflow: hidden;
+}
+.userMenu.show
+{
+    height: 192px;
+}
+.userMenu .sidebarLink
+{
+    font-size: 1rem;
+}
+.userMenu .sidebarLink:hover
+{
+    background-color: var(--white--clr-1);
+}
+/* Responsive */
+@media screen and (max-width: 768px)
+{
+    .adminSidebar
+    {
+        left: 0;
+        width: var(--sidebar-Medium);
+        transition: .4s ease-in-out;
+    }
+    .adminSidebar.Collapse
+    {
+        left: -100%;
+    }
+    .sidebarLink, .productBtn, .userBtn
+    {
+        font-size: 1rem;
+        width: var(--sidebar-Medium);
+    }
+    .productMenu .sidebarLink, .userMenu .sidebarLink
+    {
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 425px)
+{
+    .adminSidebar
+    {
+        width: var(--sidebar-Small);
+    }
+    .sidebarLink, .productBtn, .userBtn
+    {
+        height: 3rem;
+        font-size: .6rem;
+        width: var(--sidebar-Small);
+    }
+    .productMenu.show, .userMenu.show
+    {
+        height: 146.5px;
+    }
+    .productMenu .sidebarLink, .userMenu .sidebarLink
+    {
+        font-size: .4rem;
+    }
+}
+/* Responsive Selesai */
