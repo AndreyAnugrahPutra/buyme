@@ -1,0 +1,205 @@
+:root 
+{
+    --primary--clr : #dbdadf;
+    --secondary--clr : #c35862;
+    --black--clr : #353239;
+    --black--clr-1 : #29272c;
+    --white--clr : #f2f1f7;
+    --white--clr-1 : #e0e0e4;
+    --blue--clr : #587dc3;
+    --gray--clr : #b1b0b4;
+
+    --body--clr : #f0f0f0;
+}
+.form-container
+{  
+    padding: 2rem;
+}
+.form
+{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    gap: 2rem;
+}
+.form-left
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.form-title
+{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.input-group input
+{
+    border: 2px solid var(--gray--clr);
+    width: 400px;
+    font-size: 1.1rem;
+    padding: 1rem;
+    outline : none;
+    transition: .4s ease-in-out;
+}
+/* .input-group.berat-produk
+{
+    border: 2px solid var(--gray--clr);
+    width: 280px;
+    font-size: 1.1rem;
+    outline : none;
+    transition: .4s ease-in-out;
+} */
+.input-group.berat-produk select
+{
+    cursor: pointer;
+    /* border: 2px solid var(--black--clr); */
+    border: none;
+    color: var(--white--clr);
+    background-color: var(--gray--clr);
+    width: 50%;
+    font-size: 1.1rem;
+    padding: 1rem;
+    outline : none;
+    transition: .4s ease-in-out;
+}
+.input-group input:focus
+{
+    border-color: var(--secondary--clr);
+}
+.input-group.berat-produk input
+{
+    /* border: none; */
+    width: 40%;
+}
+.input-group textarea
+{
+    resize: none;
+    border: 2px solid var(--gray--clr);
+    width: 400px;
+    height: 166px;
+    font-size: 1.1rem;
+    padding: 1rem;
+    outline : none;
+    transition: .4s ease-in-out;
+}
+.img-thumb
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width: 50%; */
+    padding: 5rem 0;
+    width: 500px;
+    background-color: rgba(177, 176, 180, 0.2);
+    border: 2px solid var(--gray--clr);
+    gap: 2rem;
+}
+.img-thumb .thumbPreview
+{
+    display: none;
+}
+.img-thumb .thumbPreview.show
+{
+    display: block;
+    width: 350px;
+    height: 350px;
+    border: 2px solid var(--gray--clr);
+    overflow: hidden;
+}
+.img-thumb .thumbPreview .img 
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.inputImg #thumbImg
+{
+    display: none;
+}
+.inputImg label[for="thumbImg"]
+{
+    cursor: pointer;
+    /* border: 2px solid var(--black--clr); */
+    border: none;
+    color: var(--white--clr);
+    background-color: var(--gray--clr);
+    /* width: 20px; */
+    font-size: 1rem;
+    padding: .5rem;
+    outline : none;
+    transition: .4s ease-in-out;
+}
+.submit-produk
+{
+    cursor: pointer;
+    border: none;
+    background-color: var(--blue--clr);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    color: var(--white--clr);
+}
+/* responsive */
+@media screen and (max-width: 1024px)
+{
+    .form-title
+    {
+        font-size: 1.8rem;
+    }
+    .form 
+    {
+        gap: .5rem;
+    }
+    .form-left
+    {
+        width: 340px;
+        gap: 1rem;
+    }
+    .input-group input
+    {
+        width: 300px;
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    .input-group.berat-produk select
+    {
+        font-size: 1rem;
+        padding: 0.5rem;
+        width: 35%;
+    }
+    .input-group textarea
+    {
+        width: 300px;
+    }
+    .img-thumb
+    {
+        width: 350px;
+        gap: 1rem;
+        overflow: hidden;
+    }
+    .img-thumb .thumbPreview.show
+    {
+        width: 250px;
+        height: 250px;
+    }
+    .inputImg label[for="thumbImg"]
+    {
+        font-size: .8rem;
+    }
+    .submit-produk
+    {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 768px)
+{
+
+}
+@media screen and (max-width: 425px)
+{
+    
+}
+/* responsive Selesai */

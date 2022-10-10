@@ -165,7 +165,7 @@ class Users_model
         // $query = "INSERT INTO users_picture VALUES ('','$userId', '$Username', '$newImgName')";
 
         $query = "UPDATE users_picture SET Picture=:Picture WHERE user_id=:user_id";
-
+        
         move_uploaded_file($tmpName, $uploadPath);
 
         $this->db->query($query);

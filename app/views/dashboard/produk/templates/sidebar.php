@@ -21,7 +21,7 @@
 
                <!-- dropdown Menu -->
                <div class="productMenu">
-                <a href="<?=BASEURL?>dashboard/lihatProduk" class="sidebarLink">
+                <a href="<?=BASEURL?>dashboard/produk/<?=$action = 'lihat';?>" class="sidebarLink">
                     <span>lihat produk</span>
                     <i class="fa fa-bag-shopping"></i>
                 </a>
@@ -29,7 +29,7 @@
                     <span>tambah produk</span>
                     <i class="fa fa-plus"></i>
                 </a>
-                <a href="<?=BASEURL?>dashboard/ubahProduk" class="sidebarLink">
+                <a href="<?=BASEURL?>dashboard/produk/<?=$action = 'ubah';?>" class="sidebarLink">
                     <span>edit produk</span>
                     <i class="fa fa-edit"></i>
                 </a>
